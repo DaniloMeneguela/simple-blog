@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from '@testing-library/react';
 import { Posts } from '.';
 
 const props = {
@@ -22,19 +22,16 @@ const props = {
       cover: 'img/img3.png',
     },
   ],
-}
+};
 
 describe('<POSTS />', () => {
   it('Should render posts', () => {
-      render(<Posts {...props}/>);
+    render(<Posts {...props} />);
 
-      expect(screen.getAllByRole('heading', { name: /title/i}))
-        .toHaveLength(3);
+    expect(screen.getAllByRole('heading', { name: /title/i })).toHaveLength(3);
 
-      expect(screen.getAllByRole('img', { name: /title/i}))
-        .toHaveLength(3);
+    expect(screen.getAllByRole('img', { name: /title/i })).toHaveLength(3);
 
-      expect(screen.getAllByText(/body/i))
-        .toHaveLength(3);
+    expect(screen.getAllByText(/body/i)).toHaveLength(3);
   });
 });
