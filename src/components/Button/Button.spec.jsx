@@ -4,7 +4,8 @@ import { Button } from '.';
 
 describe('<Button />', () => {
   it('Should render the button with the text "Load More"', () => {
-    render(<Button text="Load more" />);
+    const fn = jest.fn();
+    render(<Button text="Load more" onClick={fn} />);
 
     expect.assertions(1);
 

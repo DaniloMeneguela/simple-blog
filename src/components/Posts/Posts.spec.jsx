@@ -34,4 +34,10 @@ describe('<POSTS />', () => {
 
     expect(screen.getAllByText(/body/i)).toHaveLength(3);
   });
+
+  it('Should match snapshot', () => {
+    const { container } = render(<Posts {...props} />);
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });
