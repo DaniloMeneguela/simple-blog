@@ -8,10 +8,10 @@ export const Posts = ({ posts }) => (
       <PostCard
         key={post.id} // unique key
         // PASSANDO PARA A PROPS DO COMPONENTE
-        id={post.id}
         title={post.title}
         body={post.body}
         cover={post.cover}
+        id={post.id}
       />
     ))}
   </div>
